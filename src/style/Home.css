@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+* {
+    --lightB: #F4FAFF;
+    --mainB: #3484F4;
+    font-family: 'Raleway', serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 96px 0;
+    background: white;
+}
+
+.loop__list {
+    margin: 48px 0;
+}
+
+.fade {
+    pointer-events: none;
+    background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+    position: absolute;
+    inset: 0;
+}
+
+#stat {
+    display: flex;
+    align-items: center;
+    background: var(--lightB);
+    height: 172px;
+}
+
+#stat ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#stat ul li {
+    color: var(--mainB);
+    font-size: 25px;
+}
+
+.stat__item {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.stat__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.stat__text {
+    font-size: 18px;
+}
+
+.section__title {
+    font-size: 44px;
+    font-weight: 600;
+    color: black;
+}
+
+.section__title span {
+    color: var(--mainB);
+}
+
+/*about*/
+#about {
+}
+
+.about__content {
+}
+
+.about__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 50px;
+    margin: 48px;
+}
+
+.about__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__item-text {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 0 0 30px;
+}
+
+/*popular*/
+#popular {
+    background: var(--lightB);
+}
+
+/*category*/
+#category {
+
+}
+
+.loop__item {
+    margin: 10px 0;
+    display: flex;
+    width: fit-content;
+    animation: loop linear infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+}
+
+
+.category__item {
+    display: flex;
+    border-radius: 40px;
+    border: none;
+    padding: 12px 30px;
+    margin: 0 5px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.category__item svg {
+    margin: 0 10px 0 0;
+}
+
+.category__button {
+    display: flex;
+    border-radius: 15px;
+    border: 2px solid var(--mainB);
+    background: white;
+    padding: 16px 30px;
+    color: var(--mainB);
+    margin: 0 auto;
+}
+
+.category__button:hover {
+    background: var(--mainB);
+    color: white;
+}
+
+.category__button:hover .ellipsis {
+    background: white;
+    color: var(--mainB);
+}
+
+.blue {
+    background: var(--mainB);
+    color: white;
+}
+
+.white {
+    background: white;
+    border: 2px solid var(--mainB);
+}
+
+.ellipsis-box {
+    display: flex;
+    align-items: center;
+    margin: auto 10px auto 0;
+}
+
+.ellipsis {
+    background: var(--mainB);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: 0 2px;
+    align-items: center;
+}
+
+@keyframes loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/*feedback*/
+#feedback {
+    background: var(--lightB);
+}
+
+.company__item {
+    margin: 10px 48px;
+}
+
+/*contact*/
+#contact {
+    background: var(--lightB);
+}
+
+.input__div {
+    position: relative;
+    width: 100%;
+}
+
+.input__div svg{
+    position: absolute;
+    right: 3%;
+    top: 30%;
+}
+
+#contact input[type="checkbox"] {
+    width: 28px;
+    height: 28px;
+}
+
+#contact button {
+    border-radius: 15px;
+    border: 2px solid var(--mainB);
+    background: var(--mainB);
+    color: white;
+    padding: 8px 0;
+    width: 48%;
+    text-align: center;
+}
+
+.contact__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contact__form {
+    width: 50%;
+}
+
+.contact__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact__container .input__div {
+    width: 48%;
+}
+
+.contact__container .input__div svg{
+    right: 7%;
+    top: 35%;
+}
+
+.contact__form input {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #D2D2D2;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.contact__text{
+    width: 48%;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.contact__text span {
+    color: var(--mainB);
+    font-weight: 700;
+}

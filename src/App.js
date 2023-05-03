@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { createContext, useEffect, useState } from "react";
+import AppRouter from "./components/AppRouter";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+export const PopContext = createContext(null)
 function App() {
+
+  const [loginVisible, setLoginVisible] = useState(false)
+  const [regVisible, setRegVisible] = useState(false)
+  const [forgotVisible, setForgotVisible] = useState(false)
+  const body = document.querySelector('body');
+
+  useEffect(() => {
+    if (loginVisible || regVisible || forgotVisible) body.style.overflow = 'hidden';
+    else body.style.overflow = 'visible'
+  }, [loginVisible, regVisible, forgotVisible])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PopContext.Provider value={{
+      loginVisible,
+      setLoginVisible,
+      regVisible,
+      setRegVisible,
+      forgotVisible,
+      setForgotVisible
+    }}>
+      <BrowserRouter>
+        <Navbar />
+        <AppRouter />
+      </BrowserRouter>
+    </PopContext.Provider>
+
   );
 }
 

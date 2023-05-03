@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/* navigation
+--------------------------------------------------------------------- */
+* {
+    --navbg: rgba(14, 78, 153, 0.9);
+    --logbtn: #3484F4;
+    --gray: #d2d2d2
+}
+
+nav {
+    width: 100%;
+    height: 144px;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--navbg);
+    font-family: 'Raleway', serif;
+}
+
+.logo {
+    width: 32px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.search__wrapper {
+    position: relative;
+    display: flex;
+    width: 408px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+    overflow: hidden;
+}
+
+.search__input {
+    width: 100%;
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--gray);
+}
+
+.search__button {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 10%;
+    border: none;
+    background: transparent;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.navlink {
+    cursor: pointer;
+    color: #ffffff;
+    margin: 0 36px 0 0;
+}
+
+.navlink:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    background: var(--logbtn);
+    height: 0.1vw;
+    width: 100%;
+    transform: scale(0, 1);
+    transition: opacity 0.2s ease, transform 0.3s linear;
+}
+
+.navlink:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.loginButton {
+    width: 90px;
+    height: 48px;
+    color: white;
+    border: none;
+    border-radius: 41px;
+    background: var(--logbtn);
+}
